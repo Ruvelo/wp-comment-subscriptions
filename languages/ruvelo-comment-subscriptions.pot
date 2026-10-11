@@ -1,0 +1,1492 @@
+# Copyright (C) 2026 Ruvelo
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ruvelo Comment Subscriptions 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ruvelo-comment-subscriptions\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-11T18:42:36+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: ruvelo-comment-subscriptions\n"
+
+#. Plugin Name of the plugin
+#: ruvelo-comment-subscriptions.php
+msgid "Ruvelo Comment Subscriptions"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: ruvelo-comment-subscriptions.php
+msgid "https://ruvelo.github.io/wp-comment-subscriptions/"
+msgstr ""
+
+#. Description of the plugin
+#: ruvelo-comment-subscriptions.php
+msgid "Readers subscribe to replies and new comments by email, with double opt-in, one-click unsubscribe and a page to manage it all. Imports from Subscribe To Comments Reloaded."
+msgstr ""
+
+#. Author of the plugin
+#: ruvelo-comment-subscriptions.php
+msgid "Ruvelo"
+msgstr ""
+
+#. Author URI of the plugin
+#: ruvelo-comment-subscriptions.php
+msgid "https://github.com/Ruvelo"
+msgstr ""
+
+#: src/Abilities.php:32
+#: src/Admin/Admin.php:35
+#: src/Admin/Admin.php:85
+#: src/Admin/Admin.php:89
+#: src/Admin/PostBox.php:44
+#: src/Admin/Profile.php:35
+#: src/Frontend/Route.php:107
+#: src/Frontend/Route.php:296
+#: src/Privacy.php:27
+#: src/Privacy.php:38
+#: src/Privacy.php:52
+#: templates/page.php:66
+msgid "Comment subscriptions"
+msgstr ""
+
+#: src/Abilities.php:33
+msgid "Who follows a post’s comments by email."
+msgstr ""
+
+#: src/Abilities.php:46
+msgid "The post’s ID."
+msgstr ""
+
+#: src/Abilities.php:49
+msgid "Count a post’s comment subscribers"
+msgstr ""
+
+#: src/Abilities.php:50
+msgid "How many addresses follow a post’s comments by email: all new comments, replies only, and requests still waiting for confirmation."
+msgstr ""
+
+#: src/Abilities.php:75
+msgid "List a post’s comment subscribers"
+msgstr ""
+
+#: src/Abilities.php:76
+msgid "The addresses that follow a post’s comments, with what they follow, how often, and since when. Personal data: use it only to answer the site owner."
+msgstr ""
+
+#: src/Abilities.php:117
+#: src/Abilities.php:131
+#: src/Rest/Controller.php:238
+msgid "That post doesn’t exist."
+msgstr ""
+
+#: src/Admin/Admin.php:35
+msgid "Subscriptions"
+msgstr ""
+
+#: src/Admin/Admin.php:47
+#: src/Admin/Admin.php:124
+msgid "Subscribers"
+msgstr ""
+
+#: src/Admin/Admin.php:48
+msgid "Import"
+msgstr ""
+
+#: src/Admin/Admin.php:49
+msgid "Preview emails"
+msgstr ""
+
+#: src/Admin/Admin.php:52
+#: assets/js/blocks.js:27
+msgid "Settings"
+msgstr ""
+
+#: src/Admin/Admin.php:86
+msgid "Readers who follow your posts’ comments by email."
+msgstr ""
+
+#. translators: %s: number of subscriptions
+#: src/Admin/Admin.php:141
+#, php-format
+msgid "%s subscription deleted."
+msgid_plural "%s subscriptions deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/Admin.php:142
+msgid "Test email sent. Check your inbox (and spam folder)."
+msgstr ""
+
+#: src/Admin/Admin.php:143
+msgid "WordPress couldn’t send the email. Check your mail setup: most sites need an SMTP plugin to deliver email reliably."
+msgstr ""
+
+#: src/Admin/EmailsPage.php:30
+msgid "Confirmation"
+msgstr ""
+
+#: src/Admin/EmailsPage.php:31
+msgid "New reply"
+msgstr ""
+
+#: src/Admin/EmailsPage.php:32
+#: src/Admin/SubscribersTable.php:180
+#: src/Privacy.php:61
+msgid "Daily digest"
+msgstr ""
+
+#: src/Admin/EmailsPage.php:33
+msgid "Manage link"
+msgstr ""
+
+#: src/Admin/EmailsPage.php:52
+#: src/Admin/EmailsPage.php:66
+#: src/Admin/ImportPage.php:33
+#: src/Admin/SubscribersPage.php:55
+msgid "You can’t manage comment subscriptions on this site."
+msgstr ""
+
+#: src/Admin/EmailsPage.php:88
+msgid "What subscribers get, filled in with a post from your site. Nothing is sent. To change an email, copy its template from the plugin’s templates/emails folder to ruvelo-comment-subscriptions/emails in your theme."
+msgstr ""
+
+#: src/Admin/EmailsPage.php:90
+#: src/Admin/SettingsPage.php:125
+msgid "Emails"
+msgstr ""
+
+#: src/Admin/EmailsPage.php:97
+msgid "From"
+msgstr ""
+
+#: src/Admin/EmailsPage.php:98
+msgid "To"
+msgstr ""
+
+#: src/Admin/EmailsPage.php:99
+msgid "Subject"
+msgstr ""
+
+#: src/Admin/EmailsPage.php:103
+msgid "Plain-text version"
+msgstr ""
+
+#: src/Admin/EmailsPage.php:108
+msgid "Open in a new tab"
+msgstr ""
+
+#. translators: %s: email address
+#: src/Admin/EmailsPage.php:116
+#, php-format
+msgid "Send a test to %s"
+msgstr ""
+
+#: src/Admin/ImportPage.php:67
+msgid "Closed on WordPress.org in April 2026 for a security issue. Its subscriptions live in your posts’ custom fields; this reads them, and never changes or deletes them."
+msgstr ""
+
+#: src/Admin/ImportPage.php:68
+msgid "The original plugin by Mark Jaquith. Confirmed subscriptions to all comments are imported."
+msgstr ""
+
+#: src/Admin/ImportPage.php:71
+msgid "Moving from another plugin? Bring your subscribers with you. Confirmed subscriptions stay confirmed, so nobody gets a confirmation email; requests that were never confirmed (or were suspended) are left out. Try a dry run first: it shows what would happen without changing anything."
+msgstr ""
+
+#. translators: %s: number of rows
+#: src/Admin/ImportPage.php:86
+#, php-format
+msgid "%s subscription found"
+msgid_plural "%s subscriptions found"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/ImportPage.php:90
+msgid "Nothing found"
+msgstr ""
+
+#: src/Admin/ImportPage.php:101
+msgid "Dry run"
+msgstr ""
+
+#: src/Admin/ImportPage.php:107
+#: src/Admin/ImportPage.php:183
+msgid "Import subscriptions"
+msgstr ""
+
+#: src/Admin/ImportPage.php:112
+msgid "With WP-CLI:"
+msgstr ""
+
+#: src/Admin/ImportPage.php:124
+msgid "Subscriptions to all new comments"
+msgstr ""
+
+#: src/Admin/ImportPage.php:125
+msgid "Subscriptions to replies only"
+msgstr ""
+
+#: src/Admin/ImportPage.php:126
+msgid "Already subscribed here (left as they are)"
+msgstr ""
+
+#: src/Admin/ImportPage.php:127
+msgid "Never confirmed or suspended (left out)"
+msgstr ""
+
+#: src/Admin/ImportPage.php:128
+msgid "Invalid address (left out)"
+msgstr ""
+
+#: src/Admin/ImportPage.php:129
+msgid "Post no longer exists (left out)"
+msgstr ""
+
+#: src/Admin/ImportPage.php:130
+msgid "Unknown status (left out)"
+msgstr ""
+
+#: src/Admin/ImportPage.php:133
+msgid "…of which on a daily digest"
+msgstr ""
+
+#: src/Admin/ImportPage.php:136
+msgid "Posts with subscriptions turned off (kept off)"
+msgstr ""
+
+#: src/Admin/ImportPage.php:140
+msgid "Dry run: nothing was changed"
+msgstr ""
+
+#: src/Admin/ImportPage.php:140
+msgid "Import report"
+msgstr ""
+
+#. translators: 1: number that would be imported, 2: rows looked at, 3: plugin name
+#: src/Admin/ImportPage.php:145
+#, php-format
+msgid "%1$s of %2$s %3$s subscriptions would be imported"
+msgstr ""
+
+#. translators: 1: number imported, 2: rows looked at, 3: plugin name
+#: src/Admin/ImportPage.php:147
+#, php-format
+msgid "%1$s of %2$s %3$s subscriptions imported"
+msgstr ""
+
+#: src/Admin/ImportPage.php:159
+msgid "Examples of rows left out"
+msgstr ""
+
+#: src/Admin/ImportPage.php:174
+msgid "There’s more: big imports run in steps."
+msgstr ""
+
+#: src/Admin/ImportPage.php:175
+msgid "Continue"
+msgstr ""
+
+#: src/Admin/ImportPage.php:182
+msgid "Looks right? The import can be run again safely: nobody is added twice."
+msgstr ""
+
+#: src/Admin/PostBox.php:55
+msgid "subscriber"
+msgid_plural "subscribers"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/PostBox.php:58
+#: src/Admin/SettingsPage.php:118
+#: src/Subscription.php:76
+#: templates/page.php:156
+msgid "All new comments"
+msgstr ""
+
+#: src/Admin/PostBox.php:59
+msgid "Replies only"
+msgstr ""
+
+#: src/Admin/PostBox.php:60
+#: src/Admin/SubscribersPage.php:91
+#: src/Admin/SubscribersTable.php:98
+#: src/Privacy.php:60
+msgid "Waiting for confirmation"
+msgstr ""
+
+#: src/Admin/PostBox.php:63
+msgid "See who"
+msgstr ""
+
+#: src/Admin/PostBox.php:68
+msgid "Turn off subscriptions for this post"
+msgstr ""
+
+#: src/Admin/PostBox.php:107
+msgid "Comment subscribers"
+msgstr ""
+
+#: src/Admin/PostBox.php:136
+msgid "No subscribers"
+msgstr ""
+
+#: src/Admin/Profile.php:38
+#: src/Admin/Profile.php:44
+#: templates/page.php:139
+msgid "Posts you follow"
+msgstr ""
+
+#: src/Admin/Profile.php:41
+msgid "None yet. Tick “Notify me” under a comment form to follow a conversation."
+msgstr ""
+
+#: src/Admin/Profile.php:52
+#: templates/page.php:91
+#: templates/page.php:164
+msgid "Unsubscribe"
+msgstr ""
+
+#: src/Admin/Profile.php:61
+#: src/Admin/Profile.php:64
+#: src/Admin/SubscribersTable.php:40
+#: src/Privacy.php:61
+#: templates/page.php:179
+msgid "How often"
+msgstr ""
+
+#: src/Admin/Profile.php:65
+msgid "An email per comment"
+msgstr ""
+
+#: src/Admin/Profile.php:66
+#: src/Admin/SettingsPage.php:133
+msgid "A daily digest"
+msgstr ""
+
+#: src/Admin/Profile.php:72
+#: src/Admin/Profile.php:75
+#: templates/page.php:190
+msgid "Where"
+msgstr ""
+
+#: src/Admin/Profile.php:78
+#: src/Admin/SubscribersTable.php:36
+#: src/Privacy.php:58
+#: templates/page.php:191
+msgid "Email"
+msgstr ""
+
+#: src/Admin/Profile.php:78
+#: templates/page.php:192
+msgid "My inbox on this site"
+msgstr ""
+
+#: src/Admin/Profile.php:78
+#: templates/page.php:193
+msgid "Both"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:97
+msgid "The comment form"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:100
+#: src/Admin/SettingsPage.php:103
+msgid "Options to offer"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:105
+msgid "“Notify me of replies to my comment”"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:106
+msgid "“Notify me of all new comments on this post”"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:107
+msgid "“Subscribe without commenting” under the comment form"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:107
+msgid "Or place the Subscribe to Comments block yourself."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:113
+msgid "Ticked by default"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:116
+msgid "Nothing (recommended)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:117
+msgid "Replies to my comment"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:120
+msgid "Under the GDPR and similar laws, consent must be an active choice, so boxes start unticked. Guests always confirm by email either way."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:128
+#: src/Admin/SettingsPage.php:131
+msgid "New subscribers get"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:132
+msgid "An email per comment, as they’re approved"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:134
+msgid "Subscribers can change this on their manage page."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:139
+msgid "Send digests at"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:146
+msgid "In your site’s time zone."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:150
+msgid "Quote from the comment"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:151
+msgid "words (0: just a link)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:154
+msgid "From name"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:158
+msgid "Reply-To address"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:161
+msgid "Optional. Where replies to notification emails go."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:165
+msgid "Batch size"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:167
+msgid "emails a minute, sent by WP-Cron"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:168
+msgid "Emails never go out while someone waits for a page. On a quiet site, set up a real cron job for WP-Cron, or run “wp ruvelo-comment-subscriptions queue run”."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:173
+msgid "Links and limits"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:176
+msgid "Confirmation links work for"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:177
+msgid "days, then unconfirmed requests are deleted"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:180
+msgid "Manage links work for"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:181
+msgid "days"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:184
+msgid "Requests per IP address"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:185
+msgid "an hour (0: no limit)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:188
+msgid "Emails to one address"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:190
+msgid "confirmation or link emails a day (0: no limit)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:191
+msgid "Stops anyone from using your site to flood a stranger’s inbox."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:195
+msgid "Subscriptions page"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:198
+msgid "Where the links in emails go. Nothing to set up: block themes can restyle it in the Site Editor (Templates → Comment subscriptions)."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:203
+msgid "Look"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:206
+#: src/Admin/SettingsPage.php:209
+msgid "Colour scheme"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:210
+msgid "Light"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:210
+msgid "Follow each visitor’s system setting"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:210
+msgid "Dark"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:213
+msgid "For the subscriptions page and the Subscribe to Comments block. The checkboxes in the comment form always follow your theme."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:218
+msgid "Ruvelo Inbox"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:220
+msgid "Found. Signed-in subscribers can choose their inbox, email, or both."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:220
+msgid "Not installed. Everything goes by email."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:225
+msgid "Uninstalling"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:228
+msgid "When the plugin is deleted"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:230
+msgid "Also delete every subscription and setting"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:230
+msgid "Off by default, so subscriptions survive a reinstall. Scheduled emails are always cleared."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:235
+msgid "Save changes"
+msgstr ""
+
+#: src/Admin/SubscribersPage.php:35
+msgid "Subscriptions per page"
+msgstr ""
+
+#: src/Admin/SubscribersPage.php:85
+msgid "Active subscriptions"
+msgstr ""
+
+#: src/Admin/SubscribersPage.php:86
+msgid "People subscribed"
+msgstr ""
+
+#. translators: %s: number of people
+#: src/Admin/SubscribersPage.php:88
+#, php-format
+msgid "%s on the daily digest"
+msgid_plural "%s on the daily digest"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/SubscribersPage.php:90
+msgid "Posts followed"
+msgstr ""
+
+#. translators: %d: number of days
+#: src/Admin/SubscribersPage.php:93
+#, php-format
+msgid "Deleted after %d day"
+msgid_plural "Deleted after %d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/SubscribersPage.php:96
+msgid "Emails sent, last 30 days"
+msgstr ""
+
+#. translators: %s: number of comments
+#: src/Admin/SubscribersPage.php:98
+#, php-format
+msgid "%s comment queued"
+msgid_plural "%s comments queued"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/SubscribersPage.php:113
+msgid "Most followed:"
+msgstr ""
+
+#. translators: %s: post title
+#: src/Admin/SubscribersPage.php:124
+#, php-format
+msgid "Showing subscribers to “%s”."
+msgstr ""
+
+#: src/Admin/SubscribersPage.php:126
+msgid "Show all"
+msgstr ""
+
+#: src/Admin/SubscribersPage.php:135
+msgid "Search addresses or posts"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:37
+#: src/Privacy.php:56
+msgid "Post"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:38
+#: src/Privacy.php:59
+msgid "Emails about"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:39
+#: src/Privacy.php:60
+msgid "Status"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:41
+#: src/Privacy.php:62
+msgid "Subscribed"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:64
+#: src/Admin/SubscribersTable.php:148
+msgid "Delete"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:96
+msgid "All"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:97
+#: src/Admin/SubscribersTable.php:174
+#: src/Privacy.php:60
+msgid "Active"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:117
+msgid "No subscriptions match. Try part of an address or a post title."
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:121
+msgid "No subscriptions yet. Readers subscribe from the comment form, or import them from another plugin."
+msgstr ""
+
+#. translators: %s: email address
+#: src/Admin/SubscribersTable.php:133
+#, php-format
+msgid "Select %s"
+msgstr ""
+
+#. translators: %s: display name
+#: src/Admin/SubscribersTable.php:143
+#, php-format
+msgid "Account: %s"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:147
+msgid "All for this address"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:157
+#: templates/page.php:29
+msgid "(no title)"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:159
+msgid "Deleted post"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:163
+msgid "View post"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:175
+msgid "Waiting"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:180
+msgid "As they arrive"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:188
+msgid "Imported from Subscribe To Comments Reloaded"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:189
+msgid "Imported from Subscribe to Comments"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:190
+msgid "From the comment form"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:191
+msgid "Without commenting"
+msgstr ""
+
+#: src/Admin/SubscribersTable.php:192
+msgid "From WP-CLI"
+msgstr ""
+
+#: src/Blocks.php:34
+msgid "That didn’t work. Check your connection and try again."
+msgstr ""
+
+#: src/Frontend/Forms.php:70
+#: src/Frontend/Forms.php:165
+#: src/Subscriptions.php:36
+msgid "Enter a valid email address."
+msgstr ""
+
+#: src/Frontend/Forms.php:73
+#: src/Frontend/Forms.php:168
+#: src/Frontend/Views.php:181
+msgid "That’s a lot of requests. Wait a little and try again."
+msgstr ""
+
+#: src/Frontend/Route.php:108
+msgid "Where readers confirm, change and stop their comment subscriptions, from the links in their emails."
+msgstr ""
+
+#: src/Frontend/Views.php:161
+#: src/Rest/Controller.php:130
+msgid "Almost done: check your inbox and click the link to confirm your subscription."
+msgstr ""
+
+#: src/Frontend/Views.php:162
+msgid "Thanks! To start your email notifications, click the link we just sent you."
+msgstr ""
+
+#: src/Frontend/Views.php:163
+#: src/Rest/Controller.php:129
+msgid "You’re subscribed. We’ll email you when there are new comments."
+msgstr ""
+
+#. translators: %s: post title
+#: src/Frontend/Views.php:167
+#, php-format
+msgid "You’re subscribed to the comments on “%s”. Every email has a link to stop them."
+msgstr ""
+
+#: src/Frontend/Views.php:168
+msgid "You’re subscribed. Every email has a link to stop them."
+msgstr ""
+
+#. translators: %s: post title
+#: src/Frontend/Views.php:174
+#, php-format
+msgid "Done. You won’t get more emails about “%s”."
+msgstr ""
+
+#: src/Frontend/Views.php:175
+msgid "Done. You won’t get more emails about that post."
+msgstr ""
+
+#: src/Frontend/Views.php:178
+msgid "Done. You won’t get any more comment emails from this site."
+msgstr ""
+
+#: src/Frontend/Views.php:179
+msgid "Saved."
+msgstr ""
+
+#: src/Frontend/Views.php:180
+msgid "If that address follows any posts here, a link to manage them is on its way. Check your inbox."
+msgstr ""
+
+#: src/Frontend/Views.php:182
+msgid "That doesn’t look like an email address. Check it and try again."
+msgstr ""
+
+#: src/Frontend/Views.php:183
+msgid "This post doesn’t take new subscriptions."
+msgstr ""
+
+#: src/Frontend/Views.php:184
+msgid "This page was open for a while, so nothing changed. Please try again."
+msgstr ""
+
+#: src/Frontend/Views.php:185
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#: src/Import/Importer.php:67
+msgid "Choose “stcr” (Subscribe To Comments Reloaded) or “stc” (Subscribe to Comments)."
+msgstr ""
+
+#. translators: 1: masked email, 2: post ID, 3: the old plugin's status code
+#: src/Import/Importer.php:159
+#, php-format
+msgid "%1$s on post %2$d: unknown status “%3$s”"
+msgstr ""
+
+#. translators: %d: post ID
+#: src/Import/Importer.php:187
+#, php-format
+msgid "Post %d: an address that isn’t valid"
+msgstr ""
+
+#. translators: 1: masked email, 2: post ID
+#: src/Import/Importer.php:195
+#, php-format
+msgid "%1$s: post %2$d no longer exists"
+msgstr ""
+
+#. translators: 1: comment author, 2: post title
+#: src/Inbox.php:72
+#: src/Mailer.php:319
+#, php-format
+msgid "%1$s replied to you on “%2$s”"
+msgstr ""
+
+#. translators: 1: comment author, 2: post title
+#: src/Inbox.php:74
+#: src/Mailer.php:321
+#, php-format
+msgid "%1$s commented on “%2$s”"
+msgstr ""
+
+#. translators: %s: email subject
+#: src/Mailer.php:215
+#, php-format
+msgid "[Test] %s"
+msgstr ""
+
+#: src/Mailer.php:253
+msgid "Usage-based billing is here"
+msgstr ""
+
+#: src/Mailer.php:258
+msgid "Existing price IDs work. Halyard maps each meter to a price, so you only add a “meter” key. Nothing changes for customers on flat plans."
+msgstr ""
+
+#: src/Mailer.php:267
+msgid "Heads-up for anyone on the API: usage timestamps are in UTC. Our dashboard was a day off until I noticed."
+msgstr ""
+
+#: src/Mailer.php:269
+msgid "How we price API calls"
+msgstr ""
+
+#: src/Mailer.php:270
+msgid "Could the CSV export include the meter name? Finance asked within the hour."
+msgstr ""
+
+#. translators: %s: post title
+#: src/Mailer.php:308
+#, php-format
+msgid "Confirm your subscription to “%s”"
+msgstr ""
+
+#. translators: %s: site name
+#: src/Mailer.php:310
+#, php-format
+msgid "Manage your comment subscriptions at %s"
+msgstr ""
+
+#. translators: 1: number of comments, 2: site name
+#: src/Mailer.php:313
+#, php-format
+msgid "%1$s new comment at %2$s"
+msgid_plural "%1$s new comments at %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Mailer.php:331
+msgid "One click and you’re subscribed. If you didn’t ask for this, ignore this email."
+msgstr ""
+
+#: src/Mailer.php:332
+msgid "Change or stop your comment subscriptions."
+msgstr ""
+
+#: src/Mailer.php:333
+msgid "Today’s new comments on the posts you follow."
+msgstr ""
+
+#: src/Mailer.php:371
+msgid "Someone"
+msgstr ""
+
+#: src/Privacy.php:53
+msgid "Posts whose comments you follow by email."
+msgstr ""
+
+#: src/Privacy.php:57
+msgid "Post address"
+msgstr ""
+
+#: src/Privacy.php:61
+#: templates/page.php:180
+msgid "As comments arrive"
+msgstr ""
+
+#: src/Privacy.php:63
+msgid "Confirmed"
+msgstr ""
+
+#: src/Privacy.php:111
+msgid "When you subscribe to comments on a post, we store your email address, the post, whether you want all new comments or only replies to yours, how often you want to hear from us, and when you subscribed and confirmed. If you subscribe without an account, we first email you a link to confirm; unconfirmed requests are deleted after a few days. We use your address only to send you these notifications. Every email has a one-click unsubscribe link, and unsubscribing deletes the record. Nothing is shared with anyone outside this site."
+msgstr ""
+
+#: src/Privacy.php:112
+msgid "To stop people using this site to send unwanted email, we briefly keep a count of subscription requests per IP address and per email address, in a form that can’t be read back. These counts expire within a day."
+msgstr ""
+
+#: src/Rest/Controller.php:139
+msgid "That link has expired or isn’t valid."
+msgstr ""
+
+#: src/Rest/Controller.php:148
+msgid "Nothing to unsubscribe: the link isn’t valid, or you already unsubscribed."
+msgstr ""
+
+#: src/Rest/Controller.php:161
+msgid "If that address follows any posts here, a link to manage them is on its way."
+msgstr ""
+
+#: src/Rest/Controller.php:183
+#: src/Rest/Controller.php:228
+msgid "That subscription doesn’t exist."
+msgstr ""
+
+#: src/Rest/Controller.php:196
+msgid "Only signed-in subscribers can choose their inbox."
+msgstr ""
+
+#: src/Rest/Controller.php:281
+msgid "That link has expired or isn’t valid. Ask for a new one."
+msgstr ""
+
+#: src/Rest/Controller.php:282
+msgid "Sign in, or use the link from one of your emails."
+msgstr ""
+
+#: src/Subscription.php:75
+#: templates/page.php:157
+msgid "Replies to my comments"
+msgstr ""
+
+#: src/Subscriptions.php:39
+msgid "Choose all new comments or replies to your comments."
+msgstr ""
+
+#: src/Subscriptions.php:91
+#: src/Subscriptions.php:102
+msgid "The subscription couldn’t be saved. Try again in a moment."
+msgstr ""
+
+#: src/Subscriptions.php:181
+msgid "That post doesn’t exist or isn’t public."
+msgstr ""
+
+#: src/Subscriptions.php:184
+msgid "This post doesn’t take comment subscriptions."
+msgstr ""
+
+#: templates/comment-options.php:22
+msgid "Email notifications"
+msgstr ""
+
+#: templates/comment-options.php:28
+#: templates/subscribe-form.php:34
+msgid "You get an email for every new comment on this post."
+msgstr ""
+
+#: templates/comment-options.php:29
+#: templates/comment-options.php:47
+#: templates/subscribe-form.php:35
+msgid "Manage subscriptions"
+msgstr ""
+
+#: templates/comment-options.php:35
+msgid "Notify me of replies to my comment"
+msgstr ""
+
+#: templates/comment-options.php:41
+msgid "Notify me of all new comments on this post"
+msgstr ""
+
+#: templates/comment-options.php:46
+msgid "Every email has a one-click unsubscribe link."
+msgstr ""
+
+#: templates/comment-options.php:49
+msgid "We’ll email you a link to confirm first. Every email has a one-click unsubscribe link."
+msgstr ""
+
+#: templates/emails/confirm.php:13
+#: templates/emails/confirm.txt.php:18
+#: templates/page.php:79
+msgid "replies to your comments"
+msgstr ""
+
+#: templates/emails/confirm.php:14
+#: templates/emails/confirm.txt.php:18
+#: templates/page.php:79
+msgid "new comments"
+msgstr ""
+
+#: templates/emails/confirm.php:16
+#: templates/emails/confirm.txt.php:14
+#: templates/page.php:73
+msgid "Confirm your subscription"
+msgstr ""
+
+#. translators: 1: "new comments" or "replies to your comments", 2: linked post title
+#: templates/emails/confirm.php:21
+#, php-format
+msgid "Click the button to get an email when there are %1$s on %2$s."
+msgstr ""
+
+#: templates/emails/confirm.php:30
+msgid "Yes, subscribe me"
+msgstr ""
+
+#. translators: %d: number of days
+#: templates/emails/confirm.php:37
+#: templates/emails/confirm.txt.php:23
+#, php-format
+msgid "The link works for %d day. Every email has a one-click unsubscribe link."
+msgid_plural "The link works for %d days. Every email has a one-click unsubscribe link."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/emails/confirm.php:41
+msgid "Button not working? Paste this into your browser:"
+msgstr ""
+
+#. translators: 1: "new comments" or "replies to your comments", 2: post title
+#: templates/emails/confirm.txt.php:17
+#, php-format
+msgid "Open this link to get an email when there are %1$s on “%2$s”:"
+msgstr ""
+
+#. translators: %s: number of comments
+#: templates/emails/digest.php:17
+#, php-format
+msgid "%s new comment"
+msgid_plural "%s new comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/emails/digest.php:20
+msgid "On the posts you follow, since yesterday’s digest."
+msgstr ""
+
+#: templates/emails/digest.php:36
+msgid "Read and reply →"
+msgstr ""
+
+#: templates/emails/digest.php:41
+msgid "Stop following this post"
+msgstr ""
+
+#. translators: %s: number of comments
+#: templates/emails/digest.txt.php:15
+#, php-format
+msgid "%s new comment on the posts you follow"
+msgid_plural "%s new comments on the posts you follow"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: link
+#: templates/emails/digest.txt.php:26
+#, php-format
+msgid "Stop following this post: %s"
+msgstr ""
+
+#. translators: 1: post title, 2: site name
+#: templates/emails/layout.php:76
+#: templates/emails/layout.txt.php:18
+#, php-format
+msgid "You’re getting this because you follow the comments on “%1$s” at %2$s."
+msgstr ""
+
+#: templates/emails/layout.php:80
+#: templates/page.php:116
+msgid "Unsubscribe from this post"
+msgstr ""
+
+#: templates/emails/layout.php:82
+#: templates/emails/layout.php:92
+msgid "Manage your subscriptions"
+msgstr ""
+
+#. translators: %s: site name
+#: templates/emails/layout.php:88
+#: templates/emails/layout.txt.php:25
+#, php-format
+msgid "You’re getting this daily digest because you follow comments at %s."
+msgstr ""
+
+#: templates/emails/layout.php:94
+#: templates/page.php:102
+#: templates/page.php:117
+#: templates/page.php:202
+msgid "Unsubscribe from everything"
+msgstr ""
+
+#. translators: %s: site name
+#: templates/emails/layout.php:100
+#: templates/emails/layout.txt.php:32
+#, php-format
+msgid "Someone entered this address at %s. If it wasn’t you, ignore this email: you won’t hear from us again."
+msgstr ""
+
+#. translators: %s: link
+#: templates/emails/layout.txt.php:20
+#, php-format
+msgid "Unsubscribe from this post: %s"
+msgstr ""
+
+#. translators: %s: link
+#: templates/emails/layout.txt.php:22
+#: templates/emails/layout.txt.php:27
+#, php-format
+msgid "Manage your subscriptions: %s"
+msgstr ""
+
+#. translators: %s: link
+#: templates/emails/layout.txt.php:29
+#, php-format
+msgid "Unsubscribe from everything: %s"
+msgstr ""
+
+#: templates/emails/manage-link.php:12
+#: templates/emails/manage-link.txt.php:14
+#: templates/page.php:122
+msgid "Your comment subscriptions"
+msgstr ""
+
+#. translators: %s: number of posts
+#: templates/emails/manage-link.php:18
+#, php-format
+msgid "You follow the comments on %s post. Change how often you hear, or unsubscribe, from this page."
+msgid_plural "You follow the comments on %s posts. Change how often you hear, or unsubscribe, from this page."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/emails/manage-link.php:19
+msgid "Change how often you hear, or unsubscribe, from this page."
+msgstr ""
+
+#: templates/emails/manage-link.php:26
+msgid "Manage my subscriptions"
+msgstr ""
+
+#. translators: %d: number of days
+#: templates/emails/manage-link.php:33
+#: templates/emails/manage-link.txt.php:18
+#, php-format
+msgid "The link works for %d day and only for you: don’t forward this email."
+msgid_plural "The link works for %d days and only for you: don’t forward this email."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/emails/manage-link.txt.php:15
+msgid "Change how often you hear, or unsubscribe, from this page:"
+msgstr ""
+
+#: templates/emails/notification.php:13
+msgid "New reply to your comment"
+msgstr ""
+
+#: templates/emails/notification.php:13
+msgid "New comment"
+msgstr ""
+
+#. translators: %s: date
+#: templates/emails/notification.php:30
+#, php-format
+msgid "%s · replied to your comment"
+msgstr ""
+
+#: templates/emails/notification.php:48
+msgid "Read and reply"
+msgstr ""
+
+#. translators: 1: comment author, 2: post title
+#: templates/emails/notification.txt.php:16
+#, php-format
+msgid "%1$s replied to your comment on “%2$s”:"
+msgstr ""
+
+#. translators: 1: comment author, 2: post title
+#: templates/emails/notification.txt.php:18
+#, php-format
+msgid "%1$s commented on “%2$s”:"
+msgstr ""
+
+#. translators: %s: link
+#: templates/emails/notification.txt.php:23
+#, php-format
+msgid "Read and reply: %s"
+msgstr ""
+
+#: templates/page.php:37
+#: templates/subscribe-form.php:44
+msgid "Leave this empty"
+msgstr ""
+
+#: templates/page.php:39
+#: templates/subscribe-form.php:63
+msgid "Your email"
+msgstr ""
+
+#: templates/page.php:41
+#: templates/subscribe-form.php:65
+msgid "you@example.com"
+msgstr ""
+
+#: templates/page.php:42
+msgid "Email me a link"
+msgstr ""
+
+#: templates/page.php:44
+msgid "For your privacy we never show here which posts an address follows: the link goes to that inbox."
+msgstr ""
+
+#. translators: 1: "new comments" or "replies to your comments", 2: linked post title
+#: templates/page.php:78
+#, php-format
+msgid "Get an email when there are %1$s on %2$s."
+msgstr ""
+
+#: templates/page.php:86
+msgid "Confirm my subscription"
+msgstr ""
+
+#: templates/page.php:88
+msgid "Didn’t ask for this? Close this page: nothing happens unless you press the button."
+msgstr ""
+
+#. translators: 1: site name, 2: email address
+#: templates/page.php:96
+#, php-format
+msgid "Stop every comment email from %1$s to %2$s?"
+msgstr ""
+
+#. translators: %s: linked post title
+#: templates/page.php:109
+#, php-format
+msgid "Stop emails about new comments on %s?"
+msgstr ""
+
+#. translators: %s: email address
+#: templates/page.php:126
+#, php-format
+msgid "Emails go to %s."
+msgstr ""
+
+#: templates/page.php:129
+msgid "This page’s link is just for you: please don’t share it."
+msgstr ""
+
+#: templates/page.php:135
+msgid "You’re not following any posts."
+msgstr ""
+
+#: templates/page.php:136
+msgid "Tick “Notify me” under any comment form to follow a conversation."
+msgstr ""
+
+#. translators: %s: date
+#: templates/page.php:148
+#, php-format
+msgid "Since %s"
+msgstr ""
+
+#: templates/page.php:154
+msgid "Email me about"
+msgstr ""
+
+#: templates/page.php:159
+msgid "Save"
+msgstr ""
+
+#. translators: %s: post title
+#: templates/page.php:167
+#, php-format
+msgid " from “%s”"
+msgstr ""
+
+#: templates/page.php:180
+msgid "One email per comment."
+msgstr ""
+
+#: templates/page.php:181
+msgid "Once a day"
+msgstr ""
+
+#. translators: %s: time of day
+#: templates/page.php:184
+#, php-format
+msgid "A single digest around %s."
+msgstr ""
+
+#: templates/page.php:192
+msgid "No emails."
+msgstr ""
+
+#: templates/page.php:196
+msgid "Save preferences"
+msgstr ""
+
+#: templates/page.php:201
+msgid "Done with all of it?"
+msgstr ""
+
+#: templates/page.php:208
+msgid "Nothing to unsubscribe"
+msgstr ""
+
+#: templates/page.php:209
+msgid "You’re not subscribed to this any more, or the link was changed on its way here. To see what you still follow, ask for a link:"
+msgstr ""
+
+#: templates/page.php:211
+msgid "This link doesn’t work any more"
+msgstr ""
+
+#. translators: 1: days a confirmation link works, 2: days a manage link works
+#: templates/page.php:215
+#, php-format
+msgid "Confirmation links work for %1$d days and manage links for %2$d, so old ones stop working. Ask for a new one:"
+msgstr ""
+
+#: templates/page.php:222
+msgid "Manage your comment subscriptions"
+msgstr ""
+
+#: templates/page.php:223
+msgid "Enter the address you subscribed with and we’ll email you a link to see, change or stop your subscriptions."
+msgstr ""
+
+#: templates/subscribe-form.php:25
+msgid "Subscribe without commenting"
+msgstr ""
+
+#: templates/subscribe-form.php:29
+msgid "Follow the conversation"
+msgstr ""
+
+#: templates/subscribe-form.php:34
+msgid "You get an email when someone replies to your comments here."
+msgstr ""
+
+#. translators: 1: post title, 2: the user's email address
+#: templates/subscribe-form.php:50
+#, php-format
+msgid "Get an email when someone comments on “%1$s”. We’ll send it to %2$s."
+msgstr ""
+
+#: templates/subscribe-form.php:54
+#: templates/subscribe-form.php:66
+msgid "Subscribe"
+msgstr ""
+
+#. translators: %s: post title
+#: templates/subscribe-form.php:60
+#, php-format
+msgid "Get an email when someone comments on “%s”, without leaving a comment yourself."
+msgstr ""
+
+#: templates/subscribe-form.php:68
+msgid "We’ll email you a link to confirm. Unsubscribe in one click, any time."
+msgstr ""
+
+#: assets/js/blocks.js:29
+msgid "Show the heading"
+msgstr ""
+
+#: assets/js/blocks.js:42
+msgid "The form shows on published posts that take comments."
+msgstr ""
+
+#: blocks/manage-subscriptions/block.json
+msgctxt "block title"
+msgid "Manage Comment Subscriptions"
+msgstr ""
+
+#: blocks/manage-subscriptions/block.json
+msgctxt "block description"
+msgid "Where readers confirm, change and stop their comment subscriptions. It reads the link from their email, so it belongs on the page those links open."
+msgstr ""
+
+#: blocks/manage-subscriptions/block.json
+#: blocks/subscribe-form/block.json
+msgctxt "block keyword"
+msgid "comments"
+msgstr ""
+
+#: blocks/manage-subscriptions/block.json
+msgctxt "block keyword"
+msgid "subscriptions"
+msgstr ""
+
+#: blocks/manage-subscriptions/block.json
+msgctxt "block keyword"
+msgid "unsubscribe"
+msgstr ""
+
+#: blocks/manage-subscriptions/block.json
+#: blocks/subscribe-form/block.json
+msgctxt "block style label"
+msgid "Ruvelo"
+msgstr ""
+
+#: blocks/manage-subscriptions/block.json
+#: blocks/subscribe-form/block.json
+msgctxt "block style label"
+msgid "Match theme"
+msgstr ""
+
+#: blocks/subscribe-form/block.json
+msgctxt "block title"
+msgid "Subscribe to Comments"
+msgstr ""
+
+#: blocks/subscribe-form/block.json
+msgctxt "block description"
+msgid "“Subscribe without commenting”: readers follow a post’s comments by email, with double opt-in."
+msgstr ""
+
+#: blocks/subscribe-form/block.json
+msgctxt "block keyword"
+msgid "subscribe"
+msgstr ""
+
+#: blocks/subscribe-form/block.json
+msgctxt "block keyword"
+msgid "notify"
+msgstr ""
+
+#: blocks/subscribe-form/block.json
+msgctxt "block keyword"
+msgid "email"
+msgstr ""
