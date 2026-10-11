@@ -1,0 +1,108 @@
+/* Ruvelo Comment Subscriptions in the admin: the subscribers screen, import, email previews, settings, the post box and the profile. */
+.ruvelo-cs-admin, #ruvelo-comment-subscriptions, .ruvelo-cs-profile, .ruvelo-cs-col {
+    --ruvelo-cs-line: #e4e4ef;
+    --ruvelo-cs-ink: #16162a;
+    --ruvelo-cs-text-2: #4b4b63;
+    --ruvelo-cs-text-3: #74748b;
+    --ruvelo-cs-accent: #3d4eff;
+    --ruvelo-cs-accent-ink: #2b38d6;
+    --ruvelo-cs-accent-soft: #eef0ff;
+    --ruvelo-cs-subtle: #f8f8fc;
+    --ruvelo-cs-muted: #f0f0f7;
+    --ruvelo-cs-success: #167a4a;
+    --ruvelo-cs-success-soft: #e8f8ef;
+    --ruvelo-cs-warning: #8a5300;
+    --ruvelo-cs-warning-soft: #fff4e0;
+}
+.ruvelo-cs-admin-head { display: flex; align-items: center; gap: .9rem; margin: .6rem 0 1rem; }
+.ruvelo-cs-admin-head h1 { padding: 0; margin: 0; font-size: 23px; font-weight: 600; letter-spacing: -.01em; line-height: 1.25; }
+.ruvelo-cs-admin-head p { margin: .1rem 0 0; color: var(--ruvelo-cs-text-3); }
+.ruvelo-cs-admin-mark { display: grid; place-items: center; flex: none; width: 2.6rem; height: 2.6rem; border-radius: 11px; background: linear-gradient(135deg, #3d4eff, #a78bfa); color: #fff; font: 700 1.15rem/1 -apple-system, system-ui, sans-serif; box-shadow: 0 8px 18px -8px rgba(61, 78, 255, .7); }
+.ruvelo-cs-tabs { margin-bottom: 1.25rem; }
+.ruvelo-cs-intro { max-width: 52rem; color: var(--ruvelo-cs-text-2); font-size: 14px; }
+
+.ruvelo-cs-stats { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); margin: 0 0 1rem; max-width: 80rem; }
+.ruvelo-cs-stat { background: #fff; border: 1px solid var(--ruvelo-cs-line); border-radius: 14px; padding: .95rem 1.1rem; }
+.ruvelo-cs-stat small { color: var(--ruvelo-cs-text-3); font-size: 12.5px; }
+.ruvelo-cs-stat strong { display: block; font-size: 1.65rem; line-height: 1.25; font-weight: 600; letter-spacing: -.02em; color: var(--ruvelo-cs-ink); font-variant-numeric: tabular-nums; }
+.ruvelo-cs-stat span { display: block; font-size: 12px; color: var(--ruvelo-cs-text-3); }
+.ruvelo-cs-stat:first-child { background: var(--ruvelo-cs-accent-soft); border-color: transparent; }
+.ruvelo-cs-stat:first-child small, .ruvelo-cs-stat:first-child strong { color: var(--ruvelo-cs-accent-ink); }
+.ruvelo-cs-top { display: flex; flex-wrap: wrap; gap: .4rem .5rem; align-items: center; margin: 0 0 .5rem; font-size: 13px; color: var(--ruvelo-cs-text-3); }
+.ruvelo-cs-top-item { display: inline-flex; gap: .4rem; align-items: center; padding: .15rem .3rem .15rem .65rem; border: 1px solid var(--ruvelo-cs-line); border-radius: 999px; background: #fff; color: var(--ruvelo-cs-ink); text-decoration: none; }
+.ruvelo-cs-top-item b { display: inline-grid; place-items: center; min-width: 1.4rem; padding: 0 .35rem; border-radius: 999px; background: var(--ruvelo-cs-accent-soft); color: var(--ruvelo-cs-accent-ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.ruvelo-cs-top-item:hover { border-color: var(--ruvelo-cs-accent); color: var(--ruvelo-cs-accent-ink); }
+.ruvelo-cs-filter-note { margin: .25rem 0; padding: .55rem .85rem; border-radius: 8px; background: var(--ruvelo-cs-accent-soft); color: var(--ruvelo-cs-accent-ink); display: inline-block; }
+.ruvelo-cs-admin .column-email { width: 30%; }
+.ruvelo-cs-admin .column-type, .ruvelo-cs-admin .column-status, .ruvelo-cs-admin .column-frequency { width: 11%; }
+.ruvelo-cs-admin .column-email strong { display: inline-flex; align-items: center; gap: .55rem; font-weight: 600; }
+.ruvelo-cs-avatar { display: inline-grid; place-items: center; width: 1.75rem; height: 1.75rem; border-radius: 50%; background: var(--ruvelo-cs-accent-soft); color: var(--ruvelo-cs-accent-ink); font-size: 11px; font-weight: 600; flex: none; }
+.ruvelo-cs-sub-line { display: block; color: var(--ruvelo-cs-text-3); font-size: 12px; margin-top: .1rem; }
+.ruvelo-cs-admin .column-email .ruvelo-cs-sub-line { margin-left: 2.3rem; }
+.ruvelo-cs-chip { display: inline-flex; align-items: center; gap: .35rem; border-radius: 999px; padding: .1rem .6rem; font-size: 12px; font-weight: 500; line-height: 1.6; white-space: nowrap; background: var(--ruvelo-cs-muted); color: var(--ruvelo-cs-text-2); }
+.ruvelo-cs-chip::before { content: ""; width: .4rem; height: .4rem; border-radius: 50%; background: currentColor; opacity: .8; }
+.ruvelo-cs-chip.is-success { background: var(--ruvelo-cs-success-soft); color: var(--ruvelo-cs-success); }
+.ruvelo-cs-chip.is-warning { background: var(--ruvelo-cs-warning-soft); color: var(--ruvelo-cs-warning); }
+.ruvelo-cs-chip.is-accent { background: var(--ruvelo-cs-accent-soft); color: var(--ruvelo-cs-accent-ink); }
+
+/* Import */
+.ruvelo-cs-sources { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); max-width: 80rem; }
+.ruvelo-cs-source { background: #fff; border: 1px solid var(--ruvelo-cs-line); border-radius: 14px; padding: 1.15rem 1.3rem; }
+.ruvelo-cs-source.is-found { border-color: color-mix(in srgb, var(--ruvelo-cs-accent) 40%, var(--ruvelo-cs-line)); }
+.ruvelo-cs-source-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem; }
+.ruvelo-cs-source h2 { margin: 0; font-size: 15px; }
+.ruvelo-cs-source p { color: var(--ruvelo-cs-text-2); }
+.ruvelo-cs-source-actions { display: flex; gap: .5rem; flex-wrap: wrap; margin: .9rem 0; }
+.ruvelo-cs-cli { font-size: 12px; color: var(--ruvelo-cs-text-3) !important; margin-bottom: 0; }
+.ruvelo-cs-report { max-width: 52rem; background: #fff; border: 1px solid var(--ruvelo-cs-line); border-top: 3px solid var(--ruvelo-cs-success); border-radius: 14px; padding: 1.2rem 1.4rem 1.3rem; margin: 0 0 1.25rem; }
+.ruvelo-cs-report.is-dry { border-top-color: var(--ruvelo-cs-accent); }
+.ruvelo-cs-report-kicker { margin: 0; font-size: 12px; font-weight: 600; color: var(--ruvelo-cs-success); }
+.ruvelo-cs-report.is-dry .ruvelo-cs-report-kicker { color: var(--ruvelo-cs-accent-ink); }
+.ruvelo-cs-report h2 { margin: .2rem 0 .9rem; font-size: 18px; letter-spacing: -.01em; }
+.ruvelo-cs-report-table { width: 100%; border-collapse: collapse; }
+.ruvelo-cs-report-table th, .ruvelo-cs-report-table td { padding: .5rem 0; border-bottom: 1px solid var(--ruvelo-cs-line); text-align: left; font-weight: 400; }
+.ruvelo-cs-report-table td { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.ruvelo-cs-report-table tr.is-success td { color: var(--ruvelo-cs-success); }
+.ruvelo-cs-report-table tr.is-zero th, .ruvelo-cs-report-table tr.is-zero td { color: var(--ruvelo-cs-text-3); }
+.ruvelo-cs-report-notes { margin-top: .9rem; color: var(--ruvelo-cs-text-2); }
+.ruvelo-cs-report-notes summary { cursor: pointer; font-weight: 500; }
+.ruvelo-cs-report-next { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; justify-content: space-between; margin-top: 1rem; padding: .8rem 1rem; border-radius: 10px; background: var(--ruvelo-cs-accent-soft); }
+.ruvelo-cs-report-next p { margin: 0; color: var(--ruvelo-cs-accent-ink); }
+
+/* Email previews */
+.ruvelo-cs-preview { max-width: 52rem; }
+.ruvelo-cs-seg { display: inline-flex; flex-wrap: wrap; padding: .2rem; gap: .15rem; background: var(--ruvelo-cs-muted); border-radius: 10px; margin-bottom: 1rem; }
+.ruvelo-cs-seg a { padding: .4rem .85rem; border-radius: 8px; color: var(--ruvelo-cs-text-2); font-weight: 500; text-decoration: none; }
+.ruvelo-cs-seg a:hover { color: var(--ruvelo-cs-ink); }
+.ruvelo-cs-seg a[aria-current] { background: #fff; color: var(--ruvelo-cs-ink); box-shadow: 0 0 0 1px var(--ruvelo-cs-line); }
+.ruvelo-cs-mail { background: #fff; border: 1px solid var(--ruvelo-cs-line); border-radius: 14px; overflow: hidden; }
+.ruvelo-cs-mail-head { margin: 0; padding: .8rem 1.2rem; border-bottom: 1px solid var(--ruvelo-cs-line); background: var(--ruvelo-cs-subtle); display: grid; gap: .15rem; }
+.ruvelo-cs-mail-head div { display: flex; gap: .75rem; }
+.ruvelo-cs-mail-head dt { width: 4.5rem; color: var(--ruvelo-cs-text-3); }
+.ruvelo-cs-mail-head dd { margin: 0; color: var(--ruvelo-cs-ink); }
+.ruvelo-cs-mail-frame { display: block; width: 100%; height: 640px; border: 0; background: #f8f8fc; }
+.ruvelo-cs-mail-text { border-top: 1px solid var(--ruvelo-cs-line); padding: .7rem 1.2rem; }
+.ruvelo-cs-mail-text summary { cursor: pointer; font-weight: 500; }
+.ruvelo-cs-mail-text pre { white-space: pre-wrap; word-break: break-word; font-size: 12.5px; line-height: 1.6; color: var(--ruvelo-cs-text-2); }
+.ruvelo-cs-preview-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+
+/* Settings */
+.ruvelo-cs-settings h2 { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--ruvelo-cs-line); }
+.ruvelo-cs-settings h2:first-of-type { margin-top: .5rem; border-top: 0; padding-top: 0; }
+.ruvelo-cs-check, .ruvelo-cs-admin .form-table td fieldset label.ruvelo-cs-check, .ruvelo-cs-profile td fieldset label.ruvelo-cs-check { display: block; margin: 0 0 .5rem !important; }
+.ruvelo-cs-check .description { display: block; margin: .15rem 0 0 1.6rem; }
+
+/* Post box and column */
+.ruvelo-cs-box-count { margin: 0 0 .5rem; color: var(--ruvelo-cs-text-2, #4b4b63); }
+.ruvelo-cs-box-count strong { font-size: 22px; color: var(--ruvelo-cs-ink, #16162a); margin-right: .15rem; }
+.ruvelo-cs-box-list { margin: 0 0 .75rem; }
+.ruvelo-cs-box-list li { display: flex; justify-content: space-between; margin: 0; padding: .3rem 0; border-bottom: 1px solid #f0f0f1; }
+.ruvelo-cs-box-list b { font-variant-numeric: tabular-nums; }
+.column-ruvelo_cs { width: 3.5rem; text-align: center !important; }
+.ruvelo-cs-col .dashicons { color: #646970; }
+
+/* Profile */
+.ruvelo-cs-profile-list { margin: 0; max-width: 40rem; }
+.ruvelo-cs-profile-list li { display: flex; justify-content: space-between; gap: 1rem; align-items: center; padding: .55rem 0; margin: 0; border-bottom: 1px solid #dcdcde; }
+.ruvelo-cs-profile-post { display: grid; }
+.ruvelo-cs-profile-post a { font-weight: 600; text-decoration: none; }

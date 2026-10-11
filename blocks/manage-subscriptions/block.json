@@ -1,0 +1,38 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ruvelo/manage-subscriptions",
+    "version": "1.0.0",
+    "title": "Manage Comment Subscriptions",
+    "category": "widgets",
+    "icon": "email",
+    "description": "Where readers confirm, change and stop their comment subscriptions. It reads the link from their email, so it belongs on the page those links open.",
+    "keywords": [
+        "comments",
+        "subscriptions",
+        "unsubscribe"
+    ],
+    "textdomain": "ruvelo-comment-subscriptions",
+    "supports": {
+        "html": false,
+        "multiple": false,
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "editorScript": "ruvelo-comment-subscriptions-blocks",
+    "style": "ruvelo-comment-subscriptions",
+    "render": "file:./render.php",
+    "styles": [
+        {
+            "name": "default",
+            "label": "Ruvelo",
+            "isDefault": true
+        },
+        {
+            "name": "theme",
+            "label": "Match theme"
+        }
+    ]
+}

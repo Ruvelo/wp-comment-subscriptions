@@ -1,0 +1,55 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ruvelo/subscribe-form",
+    "version": "1.0.0",
+    "title": "Subscribe to Comments",
+    "category": "widgets",
+    "icon": "email-alt",
+    "description": "“Subscribe without commenting”: readers follow a post’s comments by email, with double opt-in.",
+    "keywords": [
+        "comments",
+        "subscribe",
+        "notify",
+        "email"
+    ],
+    "textdomain": "ruvelo-comment-subscriptions",
+    "attributes": {
+        "postId": {
+            "type": "integer",
+            "default": 0
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "usesContext": [
+        "postId"
+    ],
+    "supports": {
+        "html": false,
+        "align": [
+            "wide"
+        ],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "editorScript": "ruvelo-comment-subscriptions-blocks",
+    "style": "ruvelo-comment-subscriptions",
+    "viewScript": "ruvelo-comment-subscriptions",
+    "render": "file:./render.php",
+    "styles": [
+        {
+            "name": "default",
+            "label": "Ruvelo",
+            "isDefault": true
+        },
+        {
+            "name": "theme",
+            "label": "Match theme"
+        }
+    ]
+}
