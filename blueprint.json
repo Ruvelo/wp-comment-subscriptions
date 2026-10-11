@@ -1,0 +1,55 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "meta": {
+        "title": "Ruvelo Comment Subscriptions: the conversation at Halyard",
+        "description": "Readers follow comments by email: the Subscriptions screen with Halyard's blog, its comments from Maya Okafor, Tom Reyes, Inès Laurent and Kenji Mori, and a few subscribers, plus the comment form and an importer from Subscribe To Comments Reloaded.",
+        "author": "Ruvelo",
+        "categories": ["Admin"]
+    },
+    "landingPage": "/wp-admin/edit-comments.php?page=ruvelo-comment-subscriptions",
+    "preferredVersions": {
+        "php": "8.3",
+        "wp": "7.1"
+    },
+    "features": {
+        "networking": false
+    },
+    "login": true,
+    "steps": [
+        {
+            "step": "setSiteOptions",
+            "options": {
+                "blogname": "Halyard",
+                "permalink_structure": "/%postname%/"
+            }
+        },
+        {
+            "step": "installTheme",
+            "themeData": {
+                "resource": "wordpress.org/themes",
+                "slug": "twentytwentyfive"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+        {
+            "step": "installPlugin",
+            "pluginData": {
+                "resource": "url",
+                "url": "https://github.com/Ruvelo/wp-comment-subscriptions/releases/latest/download/ruvelo-comment-subscriptions.zip"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+        {
+            "step": "wp-cli",
+            "command": "wp ruvelo-comment-subscriptions demo --yes"
+        },
+        {
+            "step": "wp-cli",
+            "command": "wp rewrite flush"
+        }
+    ]
+}

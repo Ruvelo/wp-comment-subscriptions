@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ruvelo Comment Subscriptions for WordPress</title>
+    <meta name="description" content="Readers get an email when someone replies to them or comments on a post they follow. Double opt-in, one-click unsubscribe, no upsells.">
+    <link rel="icon" href="img/icon-128x128.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono&display=swap">
+    <style>
+        :root { --ink: #16162a; --t2: #4b4b63; --t3: #74748b; --line: #e4e4ef; --subtle: #f8f8fc; --muted: #f0f0f7; --accent: #3d4eff; --accent-ink: #2b38d6; --soft: #eef0ff; --lilac: #a78bfa; --night: #11111c; --bg: #fff; color-scheme: light; }
+        @media (prefers-color-scheme: dark) { :root { --ink: #f1f1f8; --t2: #b6b6cc; --t3: #8787a3; --line: #2a2a3f; --subtle: #171725; --muted: #1f1f30; --accent: #8f9bff; --accent-ink: #b3bbff; --soft: #1e2150; --bg: #11111c; color-scheme: dark; } }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 "Geist", ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: var(--accent); }
+        :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+        .stripe { height: 3px; background: linear-gradient(90deg, #3d4eff, #a78bfa); }
+        .wrap { max-width: 72rem; margin: 0 auto; padding: 0 24px; }
+        header.top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 18px 0; }
+        .lockup { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
+        .tile { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #3d4eff, #a78bfa); color: #fff; font-weight: 600; box-shadow: 0 8px 18px -8px rgb(61 78 255 / .7); }
+        .lockup b { font-weight: 600; letter-spacing: -.01em; display: block; line-height: 1.2; }
+        .lockup small { color: var(--t3); }
+        nav.links { display: flex; gap: 1.25rem; font-size: .9rem; }
+        nav.links a { color: var(--t2); text-decoration: none; }
+        nav.links a:hover { color: var(--ink); }
+        .hero { position: relative; padding: 72px 0 40px; text-align: center; }
+        .hero::before { content: ""; position: absolute; inset: 0 -50vw; background: linear-gradient(var(--line) 1px, transparent 1px) 0 0 / 44px 44px, linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 44px 44px; mask: linear-gradient(180deg, rgb(0 0 0 / .6), transparent 70%); z-index: -1; }
+        .chip { display: inline-block; padding: .2rem .75rem; border-radius: 999px; background: var(--soft); color: var(--accent-ink); font-size: .85rem; font-weight: 500; }
+        h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); line-height: 1.02; letter-spacing: -.045em; font-weight: 600; margin: 20px auto 18px; max-width: 14ch; }
+        .lede { font-size: 1.2rem; color: var(--t2); max-width: 40rem; margin: 0 auto 32px; }
+        .cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .9rem 1.3rem; border-radius: 8px; font-weight: 500; text-decoration: none; border: 1px solid var(--line); color: var(--ink); }
+        .btn.primary { background: #3d4eff; border-color: #3d4eff; color: #fff; font-size: 1.05rem; padding: 1rem 1.5rem; box-shadow: 0 10px 24px -10px rgb(61 78 255 / .8); }
+        .btn.primary:hover { background: #2b38d6; }
+        .btn:hover { border-color: var(--accent); }
+        .note { color: var(--t3); font-size: .85rem; margin-top: 14px; }
+        .shot { position: relative; margin: 48px auto 0; }
+        .shot::before { content: ""; position: absolute; inset: 10% 10% -5%; background: radial-gradient(closest-side, rgb(167 139 250 / .5), transparent); filter: blur(30px); z-index: -1; }
+        .shot img, figure img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 14px; }
+        section { padding: 72px 0 0; }
+        h2 { font-size: 2rem; letter-spacing: -.03em; font-weight: 600; margin: 0 0 8px; }
+        .sub { color: var(--t2); margin: 0 0 32px; max-width: 44rem; }
+        .grid { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr)); }
+        figure { margin: 0; }
+        figcaption { color: var(--t2); font-size: .95rem; margin-top: 10px; }
+        figcaption b { color: var(--ink); font-weight: 600; }
+        .promises { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); list-style: none; padding: 0; margin: 0; }
+        .promises li { background: var(--soft); border-radius: 14px; padding: 18px 20px; color: var(--t2); font-size: .95rem; }
+        .promises b { display: block; color: var(--accent-ink); font-weight: 600; margin-bottom: 4px; }
+        .night { background: #11111c; color: #f1f1f8; margin-top: 72px; padding: 64px 0; }
+        .night h2 { color: #fff; }
+        .night .sub { color: #b6b6cc; }
+        .night pre { background: #171725; border: 1px solid #2a2a3f; border-radius: 14px; padding: 18px 20px; overflow-x: auto; font: 14px/1.7 "Geist Mono", ui-monospace, monospace; color: #d6d6e8; margin: 0; }
+        .night .cols { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); }
+        .night h3 { font-size: 1rem; margin: 0 0 10px; color: #c4b5fd; font-weight: 500; }
+        footer { padding: 40px 0 56px; color: var(--t3); font-size: .9rem; }
+        @media (max-width: 40rem) { .wrap { padding: 0 16px; } nav.links { display: none; } .hero { padding-top: 40px; } }
+    </style>
+</head>
+<body>
+<div class="stripe"></div>
+<div class="wrap">
+    <header class="top">
+        <a class="lockup" href="./"><span class="tile">C</span><span><b>Ruvelo Comment Subscriptions</b><small>for WordPress, by ruvelo.</small></span></a>
+        <nav class="links" aria-label="Project">
+            <a href="https://github.com/Ruvelo/wp-comment-subscriptions">GitHub</a>
+            <a href="https://wordpress.org/plugins/ruvelo-comment-subscriptions/">WordPress.org</a>
+            <a href="https://github.com/Ruvelo/wp-comment-subscriptions#for-developers">Developer guide</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <span class="chip">Free, open source, no upsells</span>
+        <h1>Close the loop on every comment.</h1>
+        <p class="lede">Readers tick a box and get an email when someone replies to them or comments on the post. Double opt-in, one-click unsubscribe, and nothing a stranger can abuse.</p>
+        <div class="cta">
+            <a class="btn primary" href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/Ruvelo/wp-comment-subscriptions/main/blueprint.json">Try it live in WordPress Playground →</a>
+            <a class="btn" href="https://github.com/Ruvelo/wp-comment-subscriptions">View on GitHub</a>
+        </div>
+        <p class="note">Runs entirely in your browser, with Halyard's blog and its subscribers already in place. Nothing to install.</p>
+        <div class="shot"><img src="img/screenshot-5.png" alt="Comments, Subscriptions: who follows what, with search, bulk delete and stats"></div>
+    </div>
+
+    <section>
+        <h2>Made to be safe first</h2>
+        <p class="sub">A public form that sends email must never be a way to flood a stranger's inbox. Guests confirm first, links are signed, and only approved comments are ever sent.</p>
+        <div class="grid">
+            <figure><img src="img/screenshot-1.png" alt="The comment form with notify options and a Subscribe without commenting form" loading="lazy"><figcaption><b>Two choices, in your theme's own style.</b> Replies to me, or every new comment, plus a form to follow without commenting.</figcaption></figure>
+            <figure><img src="img/screenshot-2.png" alt="The confirmation email" loading="lazy"><figcaption><b>Double opt-in.</b> Guests confirm by email before anything is sent to them.</figcaption></figure>
+            <figure><img src="img/screenshot-3.png" alt="A new-reply email" loading="lazy"><figcaption><b>Clean emails with one-click unsubscribe,</b> in light and dark, with the comment quoted as plain text.</figcaption></figure>
+            <figure><img src="img/screenshot-4.png" alt="The manage page" loading="lazy"><figcaption><b>No account needed.</b> A signed link opens a page to change, digest or unsubscribe.</figcaption></figure>
+            <figure><img src="img/screenshot-6.png" alt="The importer from Subscribe To Comments Reloaded" loading="lazy"><figcaption><b>Coming from Subscribe To Comments Reloaded?</b> Import after a dry run, keeping confirmed subscriptions confirmed.</figcaption></figure>
+            <figure><img src="img/screenshot-9.png" alt="The comment form on a phone" loading="lazy"><figcaption><b>Light, dark and small screens,</b> and every form works without JavaScript.</figcaption></figure>
+        </div>
+    </section>
+
+    <section>
+        <h2>Our promises</h2>
+        <p class="sub">Install it on a hundred client sites without wondering what it will show or become.</p>
+        <ul class="promises">
+            <li><b>No nags, no "pro"</b>No admin notices, no review requests, no upsells.</li>
+            <li><b>No tracking</b>No telemetry and no remote requests: no fonts, scripts or banners from anywhere else.</li>
+            <li><b>Never sold</b>Updates only from WordPress.org and Composer, through WordPress's own updater.</li>
+            <li><b>Accessible</b>Works without JavaScript, with a keyboard and a screen reader; light and dark.</li>
+        </ul>
+    </section>
+</div>
+
+<div class="night">
+    <div class="wrap">
+        <h2>For developers</h2>
+        <p class="sub">A REST API, WP-CLI commands, Abilities API registrations, overridable email templates, and actions and filters for everything that happens.</p>
+        <div class="cols">
+            <div><h3>Change who gets what</h3><pre>add_filter('ruvelo_comment_subscriptions_should_notify',
+    function (bool $send, WP_Comment $comment) {
+        return $send &amp;&amp; $comment->comment_type === 'comment';
+    }, 10, 2);</pre></div>
+            <div><h3>From the command line</h3><pre>wp ruvelo-comment-subscriptions import stcr --dry-run
+wp ruvelo-comment-subscriptions list --post=42
+wp ruvelo-comment-subscriptions queue run</pre></div>
+        </div>
+    </div>
+</div>
+
+<div class="wrap">
+    <footer>Built by <a href="https://github.com/francoisbultez">François Bultez</a> at <a href="https://github.com/Ruvelo">Ruvelo</a>, and everyone who contributes. GPL-2.0-or-later.</footer>
+</div>
+</body>
+</html>
