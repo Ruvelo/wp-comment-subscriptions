@@ -23,7 +23,7 @@
 **Close the loop on every comment.** Readers tick a box under the comment form and get an email when someone replies to them, or when anyone comments on the post. Guests confirm by email first, every email has a one-click unsubscribe, and only approved comments are ever sent. It replaces Subscribe To Comments Reloaded, closed on WordPress.org in April 2026 for a security issue, and imports its data.
 
 ```
-wp plugin install ruvelo-comment-subscriptions --activate
+wp plugin install https://github.com/Ruvelo/wp-comment-subscriptions/releases/latest/download/ruvelo-comment-subscriptions.zip --activate
 ```
 
 That's all: the options appear under your comment forms. Or click around [Halyard's blog in WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/Ruvelo/wp-comment-subscriptions/main/blueprint.json) first: it runs in your browser.
@@ -100,7 +100,7 @@ That's all: the options appear under your comment forms. Or click around [Halyar
 
 ## Getting started
 
-**1. Install** from Plugins → Add New, with WP-CLI as above, or with Composer (`composer require ruvelo/wp-comment-subscriptions`).
+**1. Install** by uploading [ruvelo-comment-subscriptions.zip](https://github.com/Ruvelo/wp-comment-subscriptions/releases/latest/download/ruvelo-comment-subscriptions.zip) in Plugins → Add New → Upload Plugin, with WP-CLI as above, or with Composer (`composer require ruvelo/wp-comment-subscriptions`).
 
 **2. Look under a comment form.** The options are there. Adjust them in **Comments → Subscriptions → Settings**.
 
